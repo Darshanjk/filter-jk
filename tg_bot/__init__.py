@@ -24,7 +24,7 @@ if ENV:
         OWNER_ID = int(os.environ.get('OWNER_ID', None))
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
-
+    AUTH_CHANNEL = set(int(x) for x in os.environ.get("AUTH_CHANNEL", "").split())
     AUTH_CHANNEL = os.environ.get('AUTH_CHANNEL', None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
