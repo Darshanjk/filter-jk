@@ -25,7 +25,7 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
+    AUTH_CHANNEL = os.environ.get('AUTH_CHANNEL', None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
@@ -67,7 +67,7 @@ else:
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
 
-    MESSAGE_DUMP = Config.MESSAGE_DUMP
+    AUTH_CHANNEL = Config.AUTH_CHANNEL
     OWNER_USERNAME = Config.OWNER_USERNAME
 
     try:
